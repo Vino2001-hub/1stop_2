@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="myntra.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Myntra-About</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .first {
+            height: 150px;
+
+        }
+
+        .nav {
+            position: fixed;
+            width: 101%;
+            background-color: white;
+            margin-top: -8px;
+            margin-left: -8px;
+            margin-right: -7px;
+            display: flex;
+            height: 100px;
+            box-shadow: 0px 1px 20px 0px rgba(83, 81, 81, 0.15);
+
+        }
+
+        .nav .logo {
+            width: 10%;
+            height: 50px;
+            float: right;
+            margin: 3%;
+
+        }
+
+        .nav .logo .tooltiptext {
+            visibility: hidden;
+            width: 70px;
+            background-color: #FD913C;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 3px 0;
+            position: absolute;
+            z-index: 1;
+            top: 100%;
+            margin-left: -70px;
+
+        }
+
+        .nav .logo:hover .tooltiptext {
+            visibility: visible;
+        }
+
+        .nav .link .a1 .tooltiptext {
+            visibility: hidden;
+            width: 70px;
+            background-color: #FD913C;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 3px 0;
+            position: absolute;
+            z-index: 1;
+            top: 149%;
+            margin-left: -40px;
+            font-size: 16px;
+
+        }
+
+        .nav .a1:hover .tooltiptext {
+            visibility: visible;
+        }
+
+        .nav .link {
+            width: 70%;
+            float: left;
+            margin-left: 30%;
+            background-color: white;
+            position: fixed;
+            margin-top: 3%;
+
+        }
+
+        .nav .link a {
+            float: left;
+            color: rgb(3, 3, 3);
+            text-decoration: none;
+            font-size: 17px;
+            width: 17%;
+            text-align: center;
+            transition: 0.5s;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+
+        .nav .link a:hover {
+            color: #FD913C;
+            font-size: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #F13AB1;
+            border-radius: 10px;
+        }
+
+        .modal-content .modal-header .modal-title {
+            margin-left: 40%;
+        }
+
+
+        .fl {
+            width: 1200px;
+            margin: 0% auto;
+            justify-content: center;
+            color: grey;
+            box-shadow: 0px 1px 20px 0px rgba(83, 81, 81, 0.15);
+            border-radius: 10px;
+
+        }
+
+        .fl p {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 3%;
+            padding: 10px;
+        }
+
+        .head {
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .fl h3 {
+            color: black;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 3%;
+        }
+
+        #footer {
+            box-shadow: 0px 1px 65px 0px rgba(83, 81, 81, 0.15);
+            height: 250px;
+            display: flex;
+            width: 100%;
+        }
+
+        .foo .f {
+            width: 40%;
+        }
+
+        .foo .f .foohead {
+            font-family: cursive;
+            font-weight: bold;
+            margin: 5%;
+        }
+
+        .foo .f .foochild {
+            margin: 5%;
+            font-family: cursive;
+        }
+
+        .foo .foochild1 .para {
+            font-weight: bold;
+        }
+
+
+        .foo .foochild1 {
+            width: 60%;
+            margin: 2% auto;
+            font-family: cursive;
+        }
+
+        .foo .foochild1 .child a {
+            float: left;
+            width: 20%;
+        }
+
+        .foo .foochild1 .child a img {
+            width: 20%;
+            transition: 0.5s;
+        }
+
+        .foo .foochild1 .child a:hover img {
+            width: 30%;
+        }
+
+        .foo .foochild1 .child1 {
+            margin-top: 9%;
+        }
+
+        .foo1 {
+            box-shadow: 0px 3px 500px 0px rgba(83, 81, 81, 0.15);
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            font-family: cursive;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+
+    <div class="first">
+        <div class="nav">
+            <div class="logo">
+                <a href="index1_1stop.html"><img src="myntra.png" alt="" width="50%" height="80%"> <span
+                        class="tooltiptext">Home</span></a>
+            </div>
+            <div class="link">
+                <a href="" class="a1" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                    </svg><span class="tooltiptext">Register</span></a>
+                <a href="about.html">About Us</a>
+                <a href="index1_1stop.html">Products</a>
+                <a href="#footer">Contact Us</a>
+            </div>
+        </div><br><br>
+    </div>
+
+
+    <!-- Main Content -->
+
+    <div>
+        <h3 class="head">Myntra/About</h3>
+    </div><br>
+
+    <div class="fl">
+        <div>
+            <div>
+                <h3>Introduction</h3>
+            </div>
+            <div>
+                <p>Myntra is a one stop shop for all your fashion and lifestyle needs. Being India's largest
+                    e-commerce
+                    store for fashion and lifestyle products, Myntra aims at providing a hassle free and enjoyable
+                    shopping
+                    experience to shoppers across the country with the widest range of brands and products on its
+                    portal.
+                    The brand is making a conscious effort to bring the power of fashion to shoppers with an array
+                    of
+                    the
+                    latest and trendiest products available in the country.</p>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <div>
+                <h3>Value proposition</h3>
+            </div>
+            <div>
+                <p>Myntra's value proposition revolves around giving consumers the power and ease of purchasing
+                    fashion
+                    and
+                    lifestyle products online. Offerings such as the largest in-season product catalogue, 100%
+                    authentic
+                    products, cash on delivery and 30 day return policy make Myntra, the preferred shopping
+                    destination
+                    in
+                    the country. To make online shopping easier for you, a dedicated customer connect team is on
+                    standby
+                    to
+                    answer your queries 24x7.</p>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <div>
+                <h3>Brands</h3>
+            </div>
+            <div>
+                <p>Myntra understands its shoppers' needs and caters to them with choice of apparel, accessories,
+                    cosmetics
+                    and footwear from over 500 leading Indian and international brands. Prominent brands include
+                    Adidas,
+                    Nike, Puma, Catwalk, Inc 5, United Colors of Benetton, FCUK, Timberland, Avirate, FabIndia and
+                    Biba
+                    to
+                    name a few. You can also shop from some recently introduced labels such as - Roadster, Sher
+                    Singh,
+                    Dressberry, Kook N Keech and ETC.</p>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+
+    <!-- Footer -->
+
+    <div class="foo" id="footer">
+        <div class="f">
+            <div>
+                <p class="foohead">Registered Office Address</p>
+                <p class="foochild">Buildings Alyssa,<br>
+                    Begonia and Clover situated in Embassy Tech Village,<br>
+                    Outer Ring Road,<br>
+                    Devarabeesanahalli Village,<br>
+                    Varthur Hobli,<br>
+                    Bengaluru – 560103, India.</p>
+            </div>
+        </div>
+        <div class="foochild1">
+            <p class="para">KEEP IN TOUCH</p><br>
+            <div class="child">
+                <a href="https://www.youtube.com/c/myntra/featured" target="_blank"><img src="youtube.png"
+                        alt="yiutube"></a>
+                <a href="https://twitter.com/myntra" target="_blank"><img src="twitter.png" alt="twitter"></a>
+                <a href="https://www.facebook.com/myntra" target="_blank"><img src="facebook.png" alt="facebook"></a>
+                <a href="https://www.instagram.com/myntra/" target="_blank"><img src="instagram.png"
+                        alt="instagram"></a>
+            </div>
+            <div class="child1">
+                <p>CIN: U72300KA2007PTC041799</p>
+                Telephone : <a href="tel:+91-80-61561999">+91-80-61561999</a>
+            </div>
+        </div>
+    </div>
+    <div class="foo1">
+        <br>
+        © 2022 www.myntra.com. All rights reserved.
+    </div>
+
+
+
+    <!-- Modal Register -->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+                    <button type="button" id="close" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form name="google" method="post">
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Name</label>
+                            <input type="text" class="form-control" id="recipient-name" name="Name"
+                                placeholder="Eg:  Rana V" pattern="^[A-Za-z]{3,}[ ]{1}[A-Z]{1,3}$" required>
+                            <span id="ename"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-email" class="col-form-label">Email</label>
+                            <input type="text" class="form-control" id="recipient-email" name="Email"
+                                placeholder="Eg:  abc@gmail.com"
+                                pattern="^[a-z_0-9.]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$" required>
+                            <span id="eemail"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-mobno" class="col-form-label">Mobile No</label>
+                            <input type="text" class="form-control" id="recipient-mobno" name="MobileNo"
+                                pattern="^[6789]{1}[0-9]{9}$" required>
+                            <span id="emobno"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-password" class="col-form-label">Password</label>
+                            <input type="password" class="form-control" id="recipient-password" name="Password"
+                                required>
+                            <span id="epass"></span>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="reset" class="btn btn-secondary">RESET</button>
+                    <button type="submit" class="btn btn-primary">SUBMIT</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQueries -->
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+    <!-- Data collection in google sheet -->
+
+    <script type="text/javascript">
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyT1xTMqlCJlOCZuqPnXFsHh631NQGs2xg8N0rzxQ4e7DAtErWCWy47xcKQUy3hAhweBg/exec'
+
+        const form = document.forms['google']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, {
+                method: 'POST', mode: 'no-cors', credentials: 'include',
+                redirect: 'follow', body: new FormData(form)
+            })
+                .then(response => alert("Registered Successfully"))
+                .catch(error => console.error('Error!', error.message))
+            var name = document.getElementById("close");
+            name.click();
+        })
+    </script>
+</body>
+
+</html>
